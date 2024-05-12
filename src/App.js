@@ -9,8 +9,12 @@ import {
   StudentContainer,
   AllCampusesContainer,
   AllStudentsContainer,
-  NewStudentContainer
+  NewStudentContainer,
+  // EditStudentContainer // added edit student container
 } from './components/containers';
+// import { EditStudentContainer } from './components/containers/EditStudentContainer';
+import EditStudentContainer from './components/containers/EditStudentContainer';
+
 
 // if you create separate components for adding/editing 
 // a student or campus, make sure you add routes to those
@@ -26,6 +30,8 @@ const App = () => {
         <Route exact path="/students" component={AllStudentsContainer} />
         <Route exact path="/newstudent" component={NewStudentContainer} />
         <Route exact path="/student/:id" component={StudentContainer} />
+        {/* edit student routes */}
+        <Route exact path="/student/edit/:id" component={EditStudentContainer} />
       </Switch>        
     </div>
   );
