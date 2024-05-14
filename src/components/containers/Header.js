@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     textAlign: 'left',
-    fontFamily: 'Raleway, sans-serif', // Change font to Raleway
+    fontFamily: 'Trebuchet MS, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif', // Change font to specified font family
     fontSize: '35px',
     color: 'white',
   },
@@ -36,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#8B0000', // Make the button color dark red
     color: 'white', // Text color for buttons
     marginRight: '10px',
+    fontFamily: 'Trebuchet MS, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif', // Add font to button text
   },
 }));
 
