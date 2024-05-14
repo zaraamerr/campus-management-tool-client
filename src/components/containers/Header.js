@@ -1,9 +1,9 @@
-/*==================================================
-Header.js
+// /*==================================================
+// Header.js
 
-It contains the Header component to be displayed on every page.
-The header contains navigation links to every other page.
-================================================== */
+// It contains the Header component to be displayed on every page.
+// The header contains navigation links to every other page.
+// ================================================== */
 // Import "material" library for building UI with React components
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -21,25 +21,22 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     textAlign: 'left',
-    fontType: 'bold',
-    fontFamily: 'sans-serif', 
-    fontSize: '35px', 
-    color: 'darkblue'
+    fontFamily: 'Raleway, sans-serif', // Change font to Raleway
+    fontSize: '35px',
+    color: 'white',
   },
-  appBar:{
-    backgroundColor: '#fcb6bb',
-    shadows: ['none'],
+  appBar: {
+    backgroundColor: '#C1121F', // Make the navbar red
+    boxShadow: 'none', // Remove the shadow
   },
-  greeting:{
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    width: "50%",
-    margin: "auto",
-  },
-  links:{
+  links: {
     textDecoration: 'none',
-  }
+  },
+  button: {
+    backgroundColor: '#8B0000', // Make the button color dark red
+    color: 'white', // Text color for buttons
+    marginRight: '10px',
+  },
 }));
 
 // Header component, displayed on every page
@@ -50,31 +47,32 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar position="static" elevation={0} className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title} color="inherit" >
+          <Typography variant="h6" className={classes.title} color="inherit">
             Campus Management System
           </Typography>
 
-          <Link className={classes.links} to={'/'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
+          <Link className={classes.links} to={'/'}>
+            <Button variant="contained" className={classes.button}>
               Home
             </Button>
           </Link>
 
-          <Link className={classes.links} to={'/campuses'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
+          <Link className={classes.links} to={'/campuses'}>
+            <Button variant="contained" className={classes.button}>
               All Campuses
             </Button>
           </Link>
 
-          <Link className={classes.links} to={'/students'} >
-            <Button variant="contained" color="primary">
+          <Link className={classes.links} to={'/students'}>
+            <Button variant="contained" className={classes.button}>
               All Students
             </Button>
           </Link>
         </Toolbar>
       </AppBar>
     </div>
-  );    
+  );
 }
 
 export default Header;
+
