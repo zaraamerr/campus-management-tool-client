@@ -15,5 +15,5 @@ This project involves developing a Campus Management System using the PERN (Post
 ----------
 ### How to Run:
 1. Clone repository
-2. Ensure you have all necessary packages installed (run npm i just in case)
+2. Ensure you have all necessary packages installed (run npm i)
 3. Type 'npm start' in terminal and allow website to come to life on http://localhost:3000/
